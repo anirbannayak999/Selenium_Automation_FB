@@ -103,6 +103,15 @@ public class Instagram_automation {
         //text fuction
         WebElement webElement7= driver.findElement(By.xpath("//button[text()='Sign up']"));
         webElement7.click();
-        
+        Thread.sleep(5000);
+        WebElement webElement8= driver.findElement(By.cssSelector("select[title='Month:']"));
+        webElement8.sendKeys("February");
+        Thread.sleep(3000);
+        WebElement webElement9= driver.findElement(By.xpath("//select[@title='Day:']"));
+        webElement9.sendKeys("2");
+        WebElement webElement10= driver.findElement(By.xpath("//select[@title='Year:']"));
+        webElement10.sendKeys("1998");
+        WebElement webElement11= driver.findElement(By.xpath("(//div[@style='width: 100%;'])[1]"));
+        webElement11.click();
     }
 }

@@ -64,7 +64,7 @@ public class Selenium_flipkart {
         driver.get("https://www.facebook.com/login/");
         WebElement create= driver.findElement(By.linkText("Sign up for Facebook"));
         create.click();
-        WebElement firstname= driver.findElement(By.name("firstname"));
+        WebElement firstname= driver.findElement(By.cssSelector("input[name='firstname']"));
         firstname.sendKeys("Anirbanpupul");
         WebElement lastname=driver.findElement(By.name("lastname"));
         lastname.sendKeys("Nayaks");
@@ -89,7 +89,7 @@ public class Selenium_flipkart {
         months.sendKeys("Feb");
         WebElement year= driver.findElement(By.id("year"));
         year.sendKeys("1998");
-        WebElement gender= driver.findElement(By.xpath("//label[text()='Male']"));
+        WebElement gender= driver.findElement(By.xpath("(//label[@class='_58mt'])[2]"));
         gender.click();
         WebElement signup= driver.findElement(By.name("websubmit"));
         signup.click();
@@ -114,13 +114,14 @@ public class Selenium_flipkart {
         WebElement emailbox= driver.findElement(By.name("lastname"));
         String fontsize=emailbox.getCssValue("font-size");
         System.out.println("the cssvalue fontsize is" + fontsize );
-        //start-with
-        driver.findElement(By.xpath("//input[starts-with(@placeholder,'Email address')]")).sendKeys("9668519553");
-        //cssSelector  -
-        driver.findElement(By.cssSelector("input#email")).sendKeys("anirban");
-        Thread.sleep(5000);
-        driver.findElement(By.cssSelector("input[id='email']")).sendKeys("anirban");
-        Thread.sleep(5000);
+        Thread.sleep(6000);
+        driver.close();
+//        driver.findElement(By.xpath("//input[starts-with(@placeholder,'Email address')]")).sendKeys("9668519553");
+//        //cssSelector  -
+//        driver.findElement(By.cssSelector("input#email")).sendKeys("anirban");
+//        Thread.sleep(5000);
+//        driver.findElement(By.cssSelector("input[id='email']")).sendKeys("anirban");
+//        Thread.sleep(5000);
     }
 }
 
