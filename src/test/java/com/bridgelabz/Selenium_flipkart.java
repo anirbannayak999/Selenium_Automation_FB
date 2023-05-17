@@ -55,7 +55,7 @@ public class Selenium_flipkart {
         WebElement submit= driver.findElement(By.id("loginbutton"));
         submit.click();
         Thread.sleep(5000);
-        driver.close();
+
     }
     @Test
     public void facebook_signup() throws IOException, InterruptedException {
@@ -114,6 +114,13 @@ public class Selenium_flipkart {
         WebElement emailbox= driver.findElement(By.name("lastname"));
         String fontsize=emailbox.getCssValue("font-size");
         System.out.println("the cssvalue fontsize is" + fontsize );
+        //start-with
+        driver.findElement(By.xpath("//input[starts-with(@placeholder,'Email address')]")).sendKeys("9668519553");
+        //cssSelector  -
+        driver.findElement(By.cssSelector("input#email")).sendKeys("anirban");
+        Thread.sleep(5000);
+        driver.findElement(By.cssSelector("input[id='email']")).sendKeys("anirban");
+        Thread.sleep(5000);
     }
 }
 
