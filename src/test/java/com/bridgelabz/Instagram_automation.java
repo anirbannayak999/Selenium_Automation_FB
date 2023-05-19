@@ -108,10 +108,10 @@ public class Instagram_automation {
         webElement8.sendKeys("February");
         Thread.sleep(3000);
         WebElement webElement9= driver.findElement(By.xpath("//select[@title='Day:']"));
-        webElement9.sendKeys("2");
+        webElement9.sendKeys("02");
         WebElement webElement10= driver.findElement(By.xpath("//select[@title='Year:']"));
         webElement10.sendKeys("1998");
-        WebElement webElement11= driver.findElement(By.xpath("(//div[@style='width: 100%;'])[1]"));
+        WebElement webElement11= driver.findElement(By.xpath("(//div[@style='width: 100%;'])[2]"));
         webElement11.click();
     }
 }
