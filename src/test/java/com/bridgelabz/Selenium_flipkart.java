@@ -116,12 +116,7 @@ public class Selenium_flipkart {
         System.out.println("the cssvalue fontsize is" + fontsize );
         Thread.sleep(6000);
         driver.close();
-//        driver.findElement(By.xpath("//input[starts-with(@placeholder,'Email address')]")).sendKeys("9668519553");
-//        //cssSelector  -
-//        driver.findElement(By.cssSelector("input#email")).sendKeys("anirban");
-//        Thread.sleep(5000);
-//        driver.findElement(By.cssSelector("input[id='email']")).sendKeys("anirban");
-//        Thread.sleep(5000);
+
     }
 }
 

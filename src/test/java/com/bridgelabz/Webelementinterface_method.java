@@ -101,13 +101,33 @@ public class Webelementinterface_method {
             WebElement textXPath = webDriver.findElement(By.xpath("(//button[text()='Sign Up'])[1]"));
             textXPath.click();
 
+        }
+        @Test
+        public void webelement() throws InterruptedException {
+            webDriver=new ChromeDriver();
+            webDriver.get("https://www.facebook.com/");
+            Thread.sleep(5000);
             //contain()
-//            WebElement containXPath = webDriver.findElement(By.xpath("//button[contains(text(),'Log')]"));
-//            containXPath.click();
-
+            WebElement containXPath = webDriver.findElement(By.xpath("//button[contains(text(),'Log')]"));
+            containXPath.click();
+        }
+        @Test
+        public void webelement89() throws InterruptedException {
+            webDriver=new ChromeDriver();
+            webDriver.get("https://www.facebook.com/");
+            WebElement webElement23=webDriver.findElement(By.linkText("Create new account"));
+            webElement23.click();
+            webDriver.findElement(By.xpath("//input[starts-with(@placeholder,'Email address')]")).sendKeys("9668519553");
+            //cssSelector  -
+//         webDriver.findElement(By.cssSelector("input#email")).sendKeys("anirban");
+//         Thread.sleep(5000);
+            webDriver.findElement(By.cssSelector("input[id='email']")).sendKeys("anirban");
+            Thread.sleep(5000);
             //contain()
-//            WebElement containXPath1 = webDriver.findElement(By.xpath("//button[contains(@name,'login')]"));
-//            containXPath1.click();
+            WebElement containXPath1 = webDriver.findElement(By.xpath("//button[contains(text(),'Sign Up')]"));
+            containXPath1.click();
+            Thread.sleep(6000);
+            webDriver.close();
         }
     }
 
